@@ -9,13 +9,23 @@ use App\Http\Requests\UpdateCursoRequest;
 class CursoController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        dd("index");
     }
 
     /**
@@ -23,9 +33,9 @@ class CursoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function adicionar()
     {
-        //
+        dd("adicionar");
     }
 
     /**
@@ -34,9 +44,9 @@ class CursoController extends Controller
      * @param  \App\Http\Requests\StoreCursoRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreCursoRequest $request)
+    public function salvar(StoreCursoRequest $request)
     {
-        //
+        dd("salvar");
     }
 
     /**
@@ -45,9 +55,9 @@ class CursoController extends Controller
      * @param  \App\Models\Curso  $curso
      * @return \Illuminate\Http\Response
      */
-    public function show(Curso $curso)
+    public function visualizar(Curso $curso)
     {
-        //
+        dd("visualizar");
     }
 
     /**
@@ -56,9 +66,9 @@ class CursoController extends Controller
      * @param  \App\Models\Curso  $curso
      * @return \Illuminate\Http\Response
      */
-    public function edit(Curso $curso)
+    public function editar(Curso $curso)
     {
-        //
+        dd("editar");
     }
 
     /**
@@ -68,9 +78,9 @@ class CursoController extends Controller
      * @param  \App\Models\Curso  $curso
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateCursoRequest $request, Curso $curso)
+    public function atualizar(UpdateCursoRequest $request, Curso $curso)
     {
-        //
+        dd("atualizar");
     }
 
     /**
@@ -79,8 +89,8 @@ class CursoController extends Controller
      * @param  \App\Models\Curso  $curso
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Curso $curso)
+    public function deletar(Curso $curso)
     {
-        //
+        dd("deletar");
     }
 }
